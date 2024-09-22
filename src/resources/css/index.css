@@ -48,6 +48,16 @@ header > .inner{
   align-items: center;
 }
 
+
+header > .inner > div {
+  display: flex;
+}
+
+header > .inner > div > * {
+  margin-left: 12px;
+}
+
+
 header .title{
   font-weight: 700;
   font-size: 17px;
@@ -146,4 +156,47 @@ button.btn-1:hover{
 
 .video-card button:hover{
   background-color: #464ade;
+}
+
+
+input.sch-input{
+  width: 500px;
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  background: #262646;
+  border: 1px solid #18182c;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  color: #fff;
+  font-family: 'basic';
+}
+
+.nft-box{
+  display:  flex;
+  margin-bottom: 28px;
+}
+
+
+.nft-box > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.nft-box .title{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+
+.nft-box p{
+  color: #999;
+  font-size: 18px;
+  font-weight: 500;
 }

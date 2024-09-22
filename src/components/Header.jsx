@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import useAccountStore from '../stores/useAccountStore';
-
+import { useNavigate } from "react-router-dom";
 
 export default function Header(){
 
     const accountStore = useAccountStore();
+    let navigate = useNavigate();
+ 
 
     //초기화
     useEffect(() => {
@@ -34,6 +36,10 @@ export default function Header(){
         }
     };
 
+    const goSearch = ()=>{
+        navigate(`/search`);
+    }
+
     const disconnect = ()=>{
         accountStore.clearAccount();
     }
@@ -45,6 +51,9 @@ export default function Header(){
                     <span className="title">NFT VIDEO TEST</span>
                     <div>
 
+                        <div>
+                            <button className="btn-1" onClick={goSearch}>Search</button>
+                        </div>
                         {accountStore.account == '' ? 
                             //연결 안됨
                             <div>
